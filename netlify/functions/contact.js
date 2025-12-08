@@ -40,7 +40,7 @@ exports.handler = async (event, context) => {
       },
       body: JSON.stringify({
         from: 'Contact Form <onboarding@resend.dev>', // Change after domain verification
-        to: process.env.YOUR_EMAIL, // Your email address
+        to: process.env.INFORM_CRISTIAN_GMAIL_COM, // Your email address
         subject: subject || `New Contact Form Submission from ${name}`,
         html: `
           <h2>New Contact Form Submission</h2>
