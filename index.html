@@ -199,12 +199,14 @@
                     Whether you have a project in mind, need help with development or design, or just want to connect, feel free to reach out. I'm always open to new opportunities, collaborations, and conversations. Send me a message and I'll get back to you as soon as I can!
                 </div>
 
-                <form> <!-- Contact form -->
+                <div id="formStatus" style="display: none; padding: 10px; margin-bottom: 15px; border-radius: 5px;"></div> <!-- Status message div -->
+
+                <form id="contactForm"> <!-- Contact form -->
                     <label for="name">Name</label> <!-- Label for name input field (for has to match the input's id) -->
-                    <input type="text" id="name"> <!-- Name input field -->
+                    <input type="text" id="name" required> <!-- Name input field -->
 
                     <label for="email">Email</label> <!-- Label for email input field (for has to match the input's id) -->
-                    <input type="text" id="email"> <!-- Email input field -->
+                    <input type="email" id="email" required> <!-- Email input field -->
 
                     <label for="message">Message</label> <!-- Label for message textarea (for has to match the text area's id) -->
                     <textarea id="message"></textarea> <!-- Message textarea -->
@@ -214,5 +216,60 @@
             </div>
         </section>
      </main>
+    <script>
+        // JavaScript to handle form submission
+        // Get the form element - adjust the selector if your form has an ID or class
+        const contactForm = document.querySelector('form');
+
+        // Add submit event listener
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent default form submission
+
+            // Get the submit button
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
+
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            try {
+                // Send to Netlify Function
+                const response = await fetch('/.netlify/functions/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Success
+                    alert('Message sent successfully! I\'ll get back to you soon.');
+                    contactForm.reset(); // Clear the form
+                } else {
+                    // Error from server
+                    alert(data.message || 'Something went wrong. Please try again.');
+                }
+            } catch (error) {
+                // Network or other error
+                alert('Failed to send message. Please check your connection and try again.');
+                console.error('Error:', error);
+            } finally {
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            }
+        });
+    </script>
 </body>
 </html>
