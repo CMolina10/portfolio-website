@@ -1,0 +1,424 @@
+:root { /* CSS Variables for Theming */
+    --text-color: #1a1c20; /* Primary text color */
+    --link-color: #4a76ee; /* Link color */
+    --background-color: #eeeff1; /* Background color */
+}
+
+* { /* Universal reset */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+html { /* HTML element styling */
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body { /* Body styling */
+    font-family: 'Poppins', sans-serif; /* Primary font */
+    background-color: var(--background-color); /* Apply background color */
+    max-width: 1400px; /* Limit maximum width for better readability on large screens */
+    margin: 0 auto; /* Center the body content */
+}
+
+a { /* Link styling */
+    color: var(--link-color); /* Apply link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* NAVBAR */
+nav { /* Navbar styling */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
+    
+    padding: 0 50px; /* Horizontal padding */
+    height: 80px; /* Fixed height */
+}
+
+nav .left a { /* Left section links styling */
+    color: var(--text-color); /* Apply text color to left links */
+    font-size: 22px; /* Font size for left links */
+    font-weight: 600; /* Font weight for left links (We are only using 400 and 600) */
+}
+
+nav .right a { /* Right section links styling */
+    color: var(--text-color); /* Apply text color to right links */
+    margin: 0 10px; /* Horizontal margin between right links */
+}
+
+nav .right a:last-child { /* Special styling for the last link in the right section */
+    color: var(--background-color); /* Change text color for the last link (INVERTED CALL TO ACTION) */
+    background-color: var(--text-color); /* Change background color for the last link */
+    padding: 5px 15px; /* Padding for the last link */
+    border-radius: 5px; /* Rounded corners for the last link */
+}
+
+nav .right a span { /* Span inside right links styling */
+    margin-left: 5px; /* Margin to the left of the span */
+}
+
+/* HERO SECTION */
+.hero-section {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 0 50px; /* Horizontal padding */
+    margin: 50px 0; /* Vertical margin */
+    margin-bottom: 100px; /* Extra bottom margin */
+    gap: 40px; /* Gap between text and headshot */
+}
+
+.hero-section .text { /* Text section styling */
+    flex: 5; /* Flex grow for text section (5/7) */
+}
+
+.hero-section .text h2 { /* Main heading styling */
+    font-size: 45px; /* Font size for main heading */;
+}
+
+.hero-section .text .links { /* Links container styling */
+    margin-top: 25px; /* Top margin for links container */
+}
+
+.hero-section .text .links a { /* Individual link styling for each anchor tag inside of links */
+    display: inline-block; /* Display links as inline blocks */
+    padding: 5px 10px; /* Padding for links */
+    border: 2px solid var(--link-color); /* Border for links */
+    border-radius: 5px; /* Rounded corners for links */
+    margin-right: 10px; /* Right margin between links */
+    margin-bottom: 10px; /* Bottom margin for spacing when wrapping */
+    transition: .1s; /* Smooth transition for hover effects */
+}
+
+.hero-section .text .links a:hover { /* Hover effect for links */
+    color: var(--text-color); /* Change text color to white on hover */
+    border: 2px solid var(--text-color); /* Change border color on hover */
+}
+
+.hero-section .headshot { /* Headshot section styling */
+    flex: 2; /* Flex grow for headshot section (2/7) */
+    display: flex; /* Use flexbox for layout */
+    justify-content: right; /* Align headshot to the right */
+}
+
+.hero-section .headshot img {
+    width: 400px; /* Fixed width for the headshot image */
+    border-radius: 50%; /* Make the headshot image circular */
+}
+
+/* SKILLS SECTION */
+.skills-section { /* Skills section styling */
+    padding: 0 50px; /* Horizontal padding */
+    margin-bottom: 100px; /* Bottom margin */
+}
+
+.skills-section h2 { /* Heading styling */
+    text-align: center; /* Center align the heading */
+    font-size: 35px; /* Font size for skills section heading */
+}
+
+.skills-section .text { /* Text description styling */
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px; /* Margin for the text */
+}
+
+.skills-section .cells { /* Container for skill cells */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.skills-section .cells .cell { /* Container for skill cells */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Gap between icon and skill name */
+
+    width: 200px; /* Fixed width for each skill cell */
+    padding: 10px 20px; /* Padding for skill cells */
+    margin: 10px; /* Margin between skill cells */
+    border: 1.5px solid #d3d3d3; /* Border for skill cells */
+    border-radius: 5px; /* Rounded corners for skill cells */
+}
+
+.skills-section .cells .cell img { /* Skill icon image styling */
+    width: 30px; /* Fixed width for skill icon images */
+    height: 30px; /* Fixed height for skill icon images */
+    object-fit: contain; /* Maintain aspect ratio of skill icon images */
+    border-radius: 2px; /* Rounded corners for skill icon images */
+}
+
+.skills-section .cells .cell span { /* Skill name text styling */
+    font-size: 18px; /* Font size for skill names */
+}
+
+/* PROJECTS SECTION */
+.projects-section { /* Projects section styling */
+    padding: 0 50px; /* Horizontal padding */
+    margin-bottom: 100px; /* Bottom margin */
+}
+
+.projects-section h2 { /* Heading styling */
+    font-size: 35px; /* Font size for projects section heading */
+    margin-bottom: 20px; /* Bottom margin for heading */
+    text-align: center; /* Center align the heading */
+}
+
+.projects-section .cells { /* Container for project cells */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items vertically */
+    gap: 10px; /* Gap between project cells */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.projects-section .cells .cell { /* Individual project cell styling */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    flex-direction: column; /* Stack icon and project name vertically */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Gap between icon and skill name */
+
+    width: 400px; /* Fixed width for each project cell */
+    
+    margin: 10px; /* Margin between project cells */
+    border: 1.5px solid #d3d3d3; /* Border for project cells */
+    border-radius: 5px; /* Rounded corners for project cells */
+}
+
+.projects-section .cells .cell img { /* Project icon image styling */
+    width: 100%; /* Full width for project icon images */
+    height: 100%; /* Fixed height for project icon images */
+    border-top-right-radius: 5px; /* Rounded top-right corner for project icon images */
+    border-top-left-radius: 5px; /* Rounded top-left corner for project icon images */
+    object-fit: cover; /* Maintain aspect ratio of project icon images */
+}
+
+.projects-section .cells .cell span {
+    padding-top: 5px; /* Top padding for project name */
+    font-weight: 600; /* Font weight for project name */
+}
+
+.projects-section .cells .cell p {
+    padding: 0 10px; /* Horizontal padding for project description */
+    text-align: center; /* Center align the project description */
+    margin-bottom: 10px; /* Bottom margin for project description */
+}
+
+.projects-section .cells .cell a {
+    display: inline-block; /* Display links as inline blocks */
+    padding: 5px 10px; /* Padding for links */
+    border: 2px solid var(--link-color); /* Border for links */
+    border-radius: 5px; /* Rounded corners for links */
+    margin-right: 10px; /* Right margin between links */
+    margin-bottom: 20px; /* Bottom margin for spacing when wrapping */
+    transition: .1s; /* Smooth transition for hover effects */
+}
+
+.projects-section .cells .cell a:hover { /* Hover effect for links */
+    color: var(--text-color); /* Change text color to white on hover */
+    border: 2px solid var(--text-color); /* Change border color on hover */
+}
+
+.projects-section .all-projects {
+    text-align: center; /* Center align the heading */
+    margin-top: 20px; /* Top margin for the text */
+}
+
+.projects-section .all-projects a {
+    display: inline-block; /* Display links as inline blocks */
+    padding: 5px 10px; /* Padding for links */
+    border: 2px solid var(--link-color); /* Border for links */
+    border-radius: 5px; /* Rounded corners for links */
+    margin-right: 10px; /* Right margin between links */
+    margin-bottom: 10px; /* Bottom margin for spacing when wrapping */
+    transition: .1s; /* Smooth transition for hover effects */
+}
+
+.projects-section .all-projects a:hover { /* Hover effect for links */
+    color: var(--text-color); /* Change text color to white on hover */
+    border: 2px solid var(--text-color); /* Change border color on hover */
+}
+
+/* TESTIMONY SECTION */
+.testimony-section { /* Testimony section styling */
+    padding: 0 50px; /* Horizontal padding */
+    margin-bottom: 100px; /* Bottom margin */
+}
+
+.testimony-section h2 { /* Heading styling */
+    font-size: 35px; /* Font size for testimony section heading */
+    margin-bottom: 30px; /* Bottom margin for heading */
+}
+
+.testimony-section .group { /* Group container styling */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    gap: 50px; /* Gap between headshot and text */
+}
+
+.testimony-section .group .person-details { /* Person details container styling */
+    text-align: center; /* Center align text */
+    flex: 1.5; /* Flex grow for person details section (1.5/10) */
+}
+
+.testimony-section .group .text {
+    flex: 8.5; /* Flex grow for testimony text section (8.5/10) */
+}
+
+.testimony-section .group .person-details img {
+    width: 200px; /* Fixed width for testimony headshot image */
+    aspect-ratio: 1 / 1; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container (avoids stretching) */
+    border-radius: 50%; /* Make the testimony headshot image circular */
+    margin-bottom: 10px; /* Bottom margin for spacing */
+}
+
+.testimony-section .group .person-details p {
+    font-weight: 600; /* Font weight for person details text */
+}
+
+.testimony-section .group .person-details p:last-child {
+    font-weight: normal; /* Lighter font weight for the second paragraph */
+}
+
+/* CONTACT SECTION */
+.contact-section { /* Contact section styling */
+    padding: 0 50px; /* Horizontal padding */
+    margin-bottom: 100px; /* Bottom margin (even though no section below contact, but good practice so users can scroll to bottom*/
+}
+
+.contact-section h2 { /* Heading styling */
+    font-size: 35px; /* Font size for contact section heading */
+}
+
+.contact-section .group {
+    display: flex; /* Use flexbox for layout */
+    gap: 50px; /* Gap between form and contact details */
+}
+
+.contact-section .group .text { /* Contact form styling */
+    flex: 3; /* Flex grow for contact form section */
+    margin-top: 20px; /* Top margin for alignment */
+}
+
+.contact-section .group form { /* Form styling */
+    flex: 3; /* Flex grow for form */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+.contact-section .group form input, 
+.contact-section .group form textarea { /* Input and textarea styling */
+    font-family: 'Poppins', sans-serif; /* Font family for input fields (have to reset because inside a form it reverts to default*/
+    border: 2px solid var(--link-color); /* Border for input fields */
+    background-color: transparent; /* Transparent background for input fields */
+    padding: 10px; /* Padding for input fields */
+    margin-bottom: 15px; /* Bottom margin between input fields */
+    outline: none; /* Remove default outline */
+    resize: none; /* Disable resizing for textarea */
+}
+
+.contact-section .group form button {
+    font-size: 16px; /* Font size for submit button */
+    font-family: 'Poppins', sans-serif; /* Font family for submit button */
+    color: #ffffff; /* Text color for submit button */
+    background-color: var(--link-color); /* Background color for submit button */
+    border: none; /* Remove border for submit button */
+    height: 50px; /* Fixed height for submit button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: .1s; /* Smooth transition for hover effects */
+}
+
+.contact-section .group form button:hover {
+    filter: brightness(.9); /* Slightly darken button on hover (90% of original brightness)*/
+}
+
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 850px) { /* Responsive design for medium screens */
+    /* HERO SECTION */
+    .hero-section .text h2 {
+        font-size: 35px; /* Decrease font size for main heading */
+    }
+}
+
+@media (max-width: 740px) { /* Responsive design for medium screens */
+    /* HERO SECTION */
+    .hero-section {
+        flex-direction: column-reverse; /* Stack text and headshot vertically, with headshot on top */
+    }
+
+    .hero-section .headshot img {
+        width: 300px; /* Decrease width for headshot image */
+    }
+
+    /* TESTIMONY SECTION */
+    .testimony-section { /* Testimony section styling */
+        text-align: center; /* Center align the heading */
+    }
+
+    .testimony-section .group {
+        flex-direction: column; /* Stack headshot and text vertically */
+    }
+
+    /* CONTACT SECTION */
+    .contact-section .group {
+        flex-direction: column; /* Stack form and contact details vertically */
+    }
+}
+
+@media (max-width: 600px) { /* Responsive design for smaller screens */
+    /* NAVBAR */
+    nav {
+        padding: 0 20px; /* Horizontal padding */
+    }
+
+    nav .right a {
+        font-size: 22px; /* Increase font size for better readability on smaller screens */
+    }
+
+    nav .right a:last-child {
+        color: var(--text-color); /* Revert text color for the last link */
+        background-color: transparent; /* Remove background color for the last link */
+        padding: 0; /* Remove padding for the last link */
+    }
+
+    nav .right a span {
+        display: none; /* Hide span text on smaller screens */
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+        padding: 0 20px; /* Horizontal padding */
+    }
+
+    .hero-section .text h2 {
+        font-size: 30px; /* Further decrease font size for main heading */
+    }
+
+    /* SKILLS SECTION */
+    .skills-section {
+        padding: 0 20px; /* Horizontal padding */
+    }
+
+    .skills-section .cells .cell span {
+        font-size: 16px; /* Decrease font size for skill names */
+    }
+
+    /* PROJECTS SECTION */
+    .projects-section {
+        padding: 0 20px; /* Horizontal padding */
+    }
+
+    /* TESTIMONY SECTION */
+    .testimony-section {
+        padding: 0 20px; /* Horizontal padding */
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+        padding: 0 20px; /* Horizontal padding */
+    }
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Portfolio</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+     <nav>
+        <div class="left"> <!-- Left side of the navbar -->
+            <a href="/">Cristian Molina</a> <!-- Logo / Brand Name -->
+        </div>
+        <div class="right"> <!-- Right side of the navbar -->
+            <a href="https://github.com/CMolina10" target="_blank" rel="noopener noreferrer">  <!-- Open in new tab instead of same one since external link -->
+                <i class="fa-brands fa-github"></i> <!-- GitHub Icon -->
+                <span>GitHub</span>
+            </a>
+            
+            <a href="http://linkedin.com/in/cristianamolina" target="_blank" rel="noopener noreferrer">  <!-- Open in new tab instead of same one since external link -->
+                <i class="fa-brands fa-linkedin"></i> <!-- LinkedIn Icon -->
+                <span>LinkedIn</span>
+            </a>
+            
+            <a href="mailto:inform.cristian@gmail.com" target="_blank" rel="noopener noreferrer">  <!-- Open in new tab instead of same one since external link -->
+                <i class="fa-solid fa-envelope"></i> <!-- Email Icon -->
+                <span>Email</span>
+            </a>
+        </div>
+     </nav>
+
+     <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section"> <!-- Hero Section with introduction and headshot -->
+            <div class="text"> <!-- Text content of the hero section -->
+                <h2>Hello, I'm Cristian!</h2>
+                <p>I'm a computer science student with a passion for building clean, accessible, and user-centered digital experiences. I enjoy turning complex ideas into intuitive products, whether that's developing responsive web applications, refining game mechanics, or collaborating with educators to solve real-world problems.
+                    
+                <br><br>With a strong foundation in web development, AI, database management, and software engineering, I focus on creating solutions that are both functional and meaningful. I love working in spaces where design, usability, and technology meet, and I'm always looking for new opportunities to learn, build, and grow.</p>
+
+                <div class="links"> <!-- Links to different sections of the portfolio -->
+                    <a href="#skills">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Skills</span>
+                    </a>
+
+                    <a href="#projects">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>Projects</span>
+                    </a>
+
+                    <a href="#testimony">
+                        <i class="fa-solid fa-pen"></i>
+                        <span>Testimony</span>
+                    </a>
+
+                    <a href="#contact"> 
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+            <div class="headshot"> <!-- Headshot image -->
+                <img src="images/hero-headshot.webp" alt="cristian-molina-headshot"> 
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills-section"> 
+            <h2>Skills</h2> 
+            <div class="text">
+                I work across a range of languages, frameworks, and tools to build reliable, accessible, and user-focused digital experiences. My skill set reflects both my academic foundation in computer science and my hands-on project experience, allowing me to take ideas from concept to deployment with clarity and efficiency.
+            </div>
+
+            <div class="cells"> <!-- Skill cells grid -->
+                <div class="cell"> <!-- Individual skill cell -->
+                    <img src="images/html-logo.webp" alt="html-logo">
+                    <span>HTML</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/css-logo.webp" alt="css-logo"/>
+                    <span>CSS</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/javascript-logo.webp" alt="javascript-logo"/>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="cell">
+                    <img src="https://img.icons8.com/color/48/python--v1.png" alt="python--v1"/>
+                    <span>Python</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/react-logo.webp" alt="react-logo"/>
+                    <span>React</span>
+                </div>
+
+                <div class="cell">
+                    <img src="https://img.icons8.com/color/48/c-plus-plus-logo.png" alt="c-plus-plus-logo"/>
+                    <span>C++</span>
+                </div>
+
+                <div class="cell">
+                    <img src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="java-coffee-cup-logo--v1"/>
+                    <span>Java</span>
+                </div>
+
+                <div class="cell">
+                    <img src="https://img.icons8.com/fluency/48/matlab.png" alt="matlab"/>
+                    <span>MATLAB</span>
+                </div>
+
+                <div class="cell">
+                    <img src="https://img.icons8.com/fluency/48/r-project.png" alt="r-project"/>
+                    <span>R</span>
+                </div>
+
+                <div class="cell">
+                    <img src="https://img.icons8.com/color/48/blender-3d.png" alt="blender-3d"/>
+                    <span>Blender</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/php-logo.webp" alt="php-logo"/>
+                    <span>PHP</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT SECTION -->
+        <section id="projects" class="projects-section">
+            <h2>Projects</h2>
+            <div class="cells">
+                <div class="cell">
+                    <img src="images/hde-logo.webp" alt="hde-logo">
+                    <span>Human Domino Effect Game</span>
+                    <p>An interactive educational game developed in Godot that promotes wellness, academic engagement, and community building through game-based learning. The project includes updated systems, improved performance, and refined scene design, all built to support a smoother player experience and future feature expansion.</p>
+                    <a href="https://github.com/CMolina10/CS499-HDEGame-Godot-Migration" target="_blank" rel="noopener noreferrer">View Project</a>
+                </div>
+
+                <div class="cell">
+                    <img src="images/KSC-logo.webp" alt="knoebel-shiva-components-logo">
+                    <span>Knoebel Shiva Components LLC Website</span>
+                    <p>A modern, professional business website built using Wix and Wix dev tools for a manufacturing company. It highlights the company's process, vision, and product offerings with clear navigation, clean layout design, and integrated contact and analytics features. The site is optimized for usability, accessibility, and future scalability.</p>
+                    <a href="https://www.ksc-usa.com/" target="_blank" rel="noopener noreferrer">View Project</a>
+                </div>
+
+                <div class="cell">
+                    <img src="images/aiimageclassifier.webp" alt="ai-image-classifier">
+                    <span>AI Image Classifier</span>
+                    <p>A streamlined machine learning application that analyzes uploaded images and predicts their category through a trained classification model. The project showcases core computer vision concepts with a clean interface, responsive feedback, and a simple workflow designed for ease of use and future model improvement.</p>
+                    <a href="https://github.com/CMolina10/AI-Image-Classifier" target="_blank" rel="noopener noreferrer">View Project</a>
+                </div>
+            </div>
+            
+            <div class="all-projects"> <!-- Link to view all projects -->
+                <a href="https://github.com/CMolina10" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> See More Projects</a>
+            </div>
+        </section>
+
+        <!-- TESTIMONIAL SECTION -->
+        <section id="testimony" class="testimony-section"> 
+            <h2>Testimony</h2>
+
+            <div class="group"> <!-- Grouping the headshot and testimony text -->
+                <div class="person-details"> <!-- Person's headshot -->
+                    <img src="images/testimony-headshot.webp" alt="testimony-headshot">
+                    <p>John Doe</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+
+                <div class="text"> <!-- Testimony text -->
+                    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta optio eius, sit veritatis in delectus expedita deserunt libero? Eum enim temporibus, laboriosam, necessitatibus illum exercitationem accusamus dolores iusto cum qui totam aspernatur repudiandae vero nesciunt placeat, minima aliquid iste quia inventore deserunt sit. Voluptatibus ullam pariatur quia consequatur laudantium dolore."
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+
+            <div class="group"> <!-- Grouping the text and contact form -->
+                <div class="text"> <!-- Contact section text -->
+                    Whether you have a project in mind, need help with development or design, or just want to connect, feel free to reach out. I'm always open to new opportunities, collaborations, and conversations. Send me a message and I'll get back to you as soon as I can!
+                </div>
+
+                <form> <!-- Contact form -->
+                    <label for="name">Name</label> <!-- Label for name input field (for has to match the input's id) -->
+                    <input type="text" id="name"> <!-- Name input field -->
+
+                    <label for="email">Email</label> <!-- Label for email input field (for has to match the input's id) -->
+                    <input type="text" id="email"> <!-- Email input field -->
+
+                    <label for="message">Message</label> <!-- Label for message textarea (for has to match the text area's id) -->
+                    <textarea id="message"></textarea> <!-- Message textarea -->
+
+                    <button type="submit">Send Message</button> <!-- Submit button -->
+                </form>
+            </div>
+        </section>
+     </main>
+</body>
+</html>
