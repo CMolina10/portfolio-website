@@ -1,11 +1,12 @@
 // netlify/functions/contact.js
-// This function handles contact form submissions and sends emails
-
 exports.handler = async (event, context) => {
   // Only allow POST requests
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({ message: 'Method Not Allowed' })
     };
   }
@@ -18,6 +19,9 @@ exports.handler = async (event, context) => {
     if (!name || !email || !message) {
       return {
         statusCode: 400,
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify({ message: 'Missing required fields' })
       };
     }
@@ -27,11 +31,14 @@ exports.handler = async (event, context) => {
     if (!emailRegex.test(email)) {
       return {
         statusCode: 400,
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify({ message: 'Invalid email address' })
       };
     }
 
-    // ===== OPTION 1: Using Resend (Recommended) =====
+    // Send email using Resend
     const response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -39,8 +46,8 @@ exports.handler = async (event, context) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: 'Contact Form <onboarding@resend.dev>', // Change after domain verification
-        to: process.env.YOUR_EMAIL, // Email address environment variable from Netlify
+        from: 'Contact Form <onboarding@resend.dev>',
+        to: process.env.YOUR_EMAIL,
         subject: subject || `New Contact Form Submission from ${name}`,
         html: `
           <h2>New Contact Form Submission</h2>
@@ -56,13 +63,38 @@ exports.handler = async (event, context) => {
     const data = await response.json();
 
     if (!response.ok) {
-      throw new Error(data.message || 'Failed to send email');
+      console.error('Resend API error:', data);
+      return {
+        statusCode: 500,
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ 
+          message: 'Failed to send email',
+          error: data.message 
+        })
+      };
     }
 
+    // Success response
+    return {
+      statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ 
+        message: 'Email sent successfully!',
+        success: true 
+      })
+    };
+
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Error in contact function:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({ 
         message: 'Failed to send email. Please try again later.',
         error: error.message 
