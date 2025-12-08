@@ -50,7 +50,7 @@ exports.handler = async (event, context) => {
         to: process.env.YOUR_EMAIL,
         subject: subject || `New Portfolio Submission from ${name}`,
         html: `
-          <h2>New Contact Form Submission</h2>
+          <h2>New Portfolio Form Submission</h2>
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Subject:</strong> ${subject}</p>
