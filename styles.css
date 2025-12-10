@@ -1,7 +1,7 @@
 :root { /* CSS Variables for Theming */
-    --text-color: #1a1c20; /* Primary text color */
-    --link-color: #4a76ee; /* Link color */
-    --background-color: #eeeff1; /* Background color */
+    --text-color: #c1dbf8; /* Primary text color */
+    --link-color: #e3af92; /* Link color */
+    --background-color: #3a506b; /* Background color */
 }
 
 * { /* Universal reset */
@@ -49,9 +49,13 @@ nav .right a { /* Right section links styling */
 
 nav .right a:last-child { /* Special styling for the last link in the right section */
     color: var(--background-color); /* Change text color for the last link (INVERTED CALL TO ACTION) */
-    background-color: var(--text-color); /* Change background color for the last link */
+    background-color: var(--link-color); /* Change background color for the last link */
     padding: 5px 15px; /* Padding for the last link */
     border-radius: 5px; /* Rounded corners for the last link */
+}
+
+nav .right a:hover { /* Hover effect for the last link in the right section */
+    filter: brightness(.9); /* Slightly darken button on hover (90% of original brightness)*/
 }
 
 nav .right a span { /* Span inside right links styling */
@@ -75,6 +79,14 @@ nav .right a span { /* Span inside right links styling */
 
 .hero-section .text h2 { /* Main heading styling */
     font-size: 45px; /* Font size for main heading */;
+    color: var(--text-color); /* Apply text color to main heading */
+}
+
+.hero-section .text p { /* Paragraph styling */
+    margin-top: 20px; /* Top margin for paragraph */
+    font-size: 18px; /* Font size for paragraph */
+    color: var(--text-color); /* Apply text color to paragraph */
+    line-height: 1.6; /* Line height for better readability */
 }
 
 .hero-section .text .links { /* Links container styling */
@@ -85,6 +97,8 @@ nav .right a span { /* Span inside right links styling */
     display: inline-block; /* Display links as inline blocks */
     padding: 5px 10px; /* Padding for links */
     border: 2px solid var(--link-color); /* Border for links */
+    color: var(--background-color); /* Change text color for linsk */
+    background-color: var(--link-color); /* Change background color for the links */
     border-radius: 5px; /* Rounded corners for links */
     margin-right: 10px; /* Right margin between links */
     margin-bottom: 10px; /* Bottom margin for spacing when wrapping */
@@ -92,8 +106,7 @@ nav .right a span { /* Span inside right links styling */
 }
 
 .hero-section .text .links a:hover { /* Hover effect for links */
-    color: var(--text-color); /* Change text color to white on hover */
-    border: 2px solid var(--text-color); /* Change border color on hover */
+    filter: brightness(.9); /* Slightly darken button on hover (90% of original brightness)*/
 }
 
 .hero-section .headshot { /* Headshot section styling */
@@ -116,11 +129,15 @@ nav .right a span { /* Span inside right links styling */
 .skills-section h2 { /* Heading styling */
     text-align: center; /* Center align the heading */
     font-size: 35px; /* Font size for skills section heading */
+    color: var(--text-color); /* Apply text color to heading */
 }
 
 .skills-section .text { /* Text description styling */
     text-align: center; /* Center align the heading */
     margin-bottom: 20px; /* Margin for the text */
+    color: var(--text-color); /* Apply text color to description */
+    font-size: 18px; /* Font size for description */
+    line-height: 1.6; /* Line height for better readability */
 }
 
 .skills-section .cells { /* Container for skill cells */
@@ -138,7 +155,7 @@ nav .right a span { /* Span inside right links styling */
     width: 200px; /* Fixed width for each skill cell */
     padding: 10px 20px; /* Padding for skill cells */
     margin: 10px; /* Margin between skill cells */
-    border: 1.5px solid #d3d3d3; /* Border for skill cells */
+    border: 1.5px solid var(--text-color); /* Border for skill cells */
     border-radius: 5px; /* Rounded corners for skill cells */
 }
 
@@ -151,6 +168,7 @@ nav .right a span { /* Span inside right links styling */
 
 .skills-section .cells .cell span { /* Skill name text styling */
     font-size: 18px; /* Font size for skill names */
+    color: var(--text-color); /* Apply text color to skill names */
 }
 
 /* PROJECTS SECTION */
@@ -163,6 +181,7 @@ nav .right a span { /* Span inside right links styling */
     font-size: 35px; /* Font size for projects section heading */
     margin-bottom: 20px; /* Bottom margin for heading */
     text-align: center; /* Center align the heading */
+    color: var(--text-color); /* Apply text color to heading */
 }
 
 .projects-section .cells { /* Container for project cells */
@@ -182,7 +201,7 @@ nav .right a span { /* Span inside right links styling */
     width: 400px; /* Fixed width for each project cell */
     
     margin: 10px; /* Margin between project cells */
-    border: 1.5px solid #d3d3d3; /* Border for project cells */
+    border: 1.5px solid var(--text-color); /* Border for project cells */
     border-radius: 5px; /* Rounded corners for project cells */
 }
 
@@ -197,18 +216,22 @@ nav .right a span { /* Span inside right links styling */
 .projects-section .cells .cell span {
     padding-top: 5px; /* Top padding for project name */
     font-weight: 600; /* Font weight for project name */
+    color: var(--text-color); /* Apply text color to project name */
 }
 
 .projects-section .cells .cell p {
     padding: 0 10px; /* Horizontal padding for project description */
     text-align: center; /* Center align the project description */
     margin-bottom: 10px; /* Bottom margin for project description */
+    color: var(--text-color); /* Apply text color to project name */
 }
 
 .projects-section .cells .cell a {
     display: inline-block; /* Display links as inline blocks */
     padding: 5px 10px; /* Padding for links */
     border: 2px solid var(--link-color); /* Border for links */
+    color: var(--background-color); /* Change text color for links */
+    background-color: var(--link-color); /* Change background color for the links */
     border-radius: 5px; /* Rounded corners for links */
     margin-right: 10px; /* Right margin between links */
     margin-bottom: 20px; /* Bottom margin for spacing when wrapping */
@@ -216,8 +239,7 @@ nav .right a span { /* Span inside right links styling */
 }
 
 .projects-section .cells .cell a:hover { /* Hover effect for links */
-    color: var(--text-color); /* Change text color to white on hover */
-    border: 2px solid var(--text-color); /* Change border color on hover */
+    filter: brightness(.9); /* Slightly darken button on hover (90% of original brightness)*/
 }
 
 .projects-section .all-projects {
@@ -228,6 +250,8 @@ nav .right a span { /* Span inside right links styling */
 .projects-section .all-projects a {
     display: inline-block; /* Display links as inline blocks */
     padding: 5px 10px; /* Padding for links */
+    color: var(--background-color); /* Change text color for links */
+    background-color: var(--link-color); /* Change background color for the links */
     border: 2px solid var(--link-color); /* Border for links */
     border-radius: 5px; /* Rounded corners for links */
     margin-right: 10px; /* Right margin between links */
@@ -236,8 +260,7 @@ nav .right a span { /* Span inside right links styling */
 }
 
 .projects-section .all-projects a:hover { /* Hover effect for links */
-    color: var(--text-color); /* Change text color to white on hover */
-    border: 2px solid var(--text-color); /* Change border color on hover */
+    filter: brightness(.9); /* Slightly darken button on hover (90% of original brightness)*/
 }
 
 /* TESTIMONY SECTION */
@@ -290,6 +313,7 @@ nav .right a span { /* Span inside right links styling */
 
 .contact-section h2 { /* Heading styling */
     font-size: 35px; /* Font size for contact section heading */
+    color: var(--text-color); /* Apply text color to project name */
 }
 
 .contact-section .group {
@@ -300,6 +324,7 @@ nav .right a span { /* Span inside right links styling */
 .contact-section .group .text { /* Contact form styling */
     flex: 3; /* Flex grow for contact form section */
     margin-top: 20px; /* Top margin for alignment */
+    color: var(--text-color); /* Apply text color to project name */
 }
 
 .contact-section .group form { /* Form styling */
@@ -308,10 +333,17 @@ nav .right a span { /* Span inside right links styling */
     flex-direction: column; /* Stack form elements vertically */
 }
 
+.contact-section .group form label { /* Label styling */
+    margin-bottom: 5px; /* Bottom margin for spacing */
+    font-size: 16px; /* Font size for labels */
+    color: var(--text-color); /* Apply text color to labels */
+}
+
 .contact-section .group form input, 
 .contact-section .group form textarea { /* Input and textarea styling */
     font-family: 'Poppins', sans-serif; /* Font family for input fields (have to reset because inside a form it reverts to default*/
-    border: 2px solid var(--link-color); /* Border for input fields */
+    border: 2px solid var(--text-color); /* Border for input fields */
+    color: var(--text-color); /* Text color for input fields */
     background-color: transparent; /* Transparent background for input fields */
     padding: 10px; /* Padding for input fields */
     margin-bottom: 15px; /* Bottom margin between input fields */
@@ -322,7 +354,7 @@ nav .right a span { /* Span inside right links styling */
 .contact-section .group form button {
     font-size: 16px; /* Font size for submit button */
     font-family: 'Poppins', sans-serif; /* Font family for submit button */
-    color: #ffffff; /* Text color for submit button */
+    color: var(--background-color); /* Text color for submit button */
     background-color: var(--link-color); /* Background color for submit button */
     border: none; /* Remove border for submit button */
     height: 50px; /* Fixed height for submit button */
