@@ -429,16 +429,17 @@ nav .right a span { /* Span inside right links styling */
     .hero-section .text h2 {
         font-size: 30px; /* Further decrease font size for main heading */
         display: flex; /* Use flexbox for layout */
-        flex-direction: row; /* Stack links vertically */
+        flex-direction: row; /* Stack links horizontally */
         justify-content: center; /* Center align content */
     }
 
     .hero-section .text div {
         display: flex; /* Use flexbox for layout */
-        flex-direction: row; /* Stack links vertically */
+        flex-direction: row; /* Stack links horizontally */
         justify-content: center; /* Center align content */
+        margin-left: 10px;
     }
-
+    
     /* SKILLS SECTION */
     .skills-section {
         padding: 0 20px; /* Horizontal padding */
