@@ -428,11 +428,33 @@ nav .right a span { /* Span inside right links styling */
 
     .hero-section .text h2 {
         font-size: 30px; /* Further decrease font size for main heading */
+        display: flex; /* Use flexbox for layout */
+        flex-direction: row; /* Stack links vertically */
+        justify-content: center; /* Center align content */
+    }
+
+    .hero-section .text div {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: row; /* Stack links vertically */
+        justify-content: center; /* Center align content */
     }
 
     /* SKILLS SECTION */
     .skills-section {
         padding: 0 20px; /* Horizontal padding */
+    }
+
+    .skills-section .cells {
+        display: flex;
+        flex-wrap: wrap; /* allows cells to move to next line */
+        justify-content: center;
+    }
+
+    .skills-section .cells .cell { /* Under 600 pixel screens */
+        width: 150px;       /* smaller width so multiple fit per row */
+        padding: 8px 12px;  /* tighter padding */
+        margin: 6px;        /* smaller margin */
+        gap: 10px; /* Gap between icon and skill name */
     }
 
     .skills-section .cells .cell span {
@@ -453,4 +475,10 @@ nav .right a span { /* Span inside right links styling */
     .contact-section {
         padding: 0 20px; /* Horizontal padding */
     }
+
+    .contact-section h2 {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: row; /* Stack links vertically */
+        justify-content: center; /* Center align content */
+    } 
 }
